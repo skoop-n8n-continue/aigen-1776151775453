@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>USD to PKR Converter</title>
+    <link rel="stylesheet" href="styles.css?v=x9r4p2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="currency-symbol">$</span>
+                <h1>Currency Converter</h1>
+            </div>
+            <div class="live-status">
+                <span class="pulse"></span>
+                <span id="update-time">Loading rate...</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="converter-card">
+                <div class="input-group">
+                    <label for="usd-input">US Dollar (USD)</label>
+                    <div class="input-wrapper">
+                        <span class="prefix">$</span>
+                        <input type="number" id="usd-input" value="1" min="0" step="0.01">
+                    </div>
+                </div>
+
+                <div class="swap-divider">
+                    <div class="line"></div>
+                    <div class="swap-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"/>
+                        </svg>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="pkr-input">Pakistani Rupee (PKR)</label>
+                    <div class="input-wrapper">
+                        <span class="prefix">₨</span>
+                        <input type="number" id="pkr-input" readonly>
+                    </div>
+                </div>
+
+                <div class="rate-info">
+                    <p>Current Rate: <span id="base-rate">1 USD = 279.13 PKR</span></p>
+                </div>
+            </div>
+
+            <div class="quick-conversion">
+                <h2>Quick Reference</h2>
+                <div class="reference-grid">
+                    <div class="ref-item" data-val="5">$5 = <span class="ref-pkr">...</span></div>
+                    <div class="ref-item" data-val="10">$10 = <span class="ref-pkr">...</span></div>
+                    <div class="ref-item" data-val="20">$20 = <span class="ref-pkr">...</span></div>
+                    <div class="ref-item" data-val="50">$50 = <span class="ref-pkr">...</span></div>
+                    <div class="ref-item" data-val="100">$100 = <span class="ref-pkr">...</span></div>
+                    <div class="ref-item" data-val="500">$500 = <span class="ref-pkr">...</span></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Skoop Digital Signage | Real-time Market Data</p>
+        </footer>
+    </div>
+    <script src="script.js?v=x9r4p2"></script>
+</body>
+</html>
